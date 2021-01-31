@@ -1,0 +1,33 @@
+.icon-text {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    font-size: 12px;
+    padding-left: 12px;
+
+    &-bold {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .icon-text {
+    &__text {
+      &-bold {
+        font-size: calc(14px + (20 - 14) * ((100vw - 991px) / (1280 - 991)));
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .icon-text {
+    &__text {
+      &-bold {
+        font-size: 14px;
+      }
+    }
+  }
+}

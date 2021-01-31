@@ -1,0 +1,278 @@
+.footer {
+  padding: 0 15px;
+
+  &__line, &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  &__footer {
+    align-items: center;
+  }
+
+  &__block {
+    width: 20%;
+    padding-right: 15px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 14px;
+    padding-bottom: 40px;
+    padding-top: 25px;
+  }
+
+  &__social {
+    padding-bottom: 30px;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 12px;
+    padding-bottom: 10px;
+
+    &-big {
+      display: block;
+      font-size: 16px;
+    }
+
+    & > svg {
+      opacity: .3;
+      margin-right: 20px;
+    }
+
+    &:hover {
+      color: $orange;
+
+      & > svg {
+        opacity: 1;
+
+      }
+
+      & > svg > g > path:first-child, path:first-of-type {
+        fill: $orange;
+      }
+    }
+  }
+
+  &__left, &__right {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__right > &__link {
+    display: flex;
+    padding-left: 20px;
+  }
+
+  &__btn {
+    padding: 8px 18px;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .footer {
+    &__line, &__footer {
+      padding-bottom: 35px;
+    }
+
+    &__text {
+      font-size: 12px;
+      padding-bottom: 15px;
+    }
+
+    &__logo {
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    &__footer {
+      align-items: center;
+    }
+
+    &__block {
+      padding-right: 15px;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .footer {
+    &__line, &__footer {
+      padding-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    &__text {
+      font-size: 12px;
+      padding-bottom: 15px;
+    }
+
+    &__logo {
+      display: block;
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+
+    &__descr {
+      padding: 0;
+    }
+
+    &__footer {
+      align-items: center;
+    }
+
+    &__block {
+      width: 25%;
+
+      &:first-of-type, &:first-child {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 13px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    &__social {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__link {
+
+      &-big {
+        display: block;
+        font-size: 14px;
+      }
+
+      & > svg {
+        margin-right: 0;
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    &__block {
+      width: 50%;
+    }
+
+    &__link {
+      padding-bottom: 8px;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+
+    &__descr {
+      display: none;
+    }
+  }
+
+}
+
+@media screen and(max-width: 575px) {
+  .footer {
+    &__social {
+      width: 100%;
+      padding-bottom: 0;
+    }
+
+    &__block {
+      width: 100%;
+
+      &:last-child, &:last-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & > .footer__title {
+          &:after {
+            content: none;
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__menu {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &__title {
+      padding: 15px 0;
+      position: relative;
+
+      &::after {
+        content: url("../img/ularrow.svg");
+        position: absolute;
+        top: 12px;
+        right: 0;
+      }
+
+      &.active {
+        &::after {
+          content: url("../img/ularrow.svg");
+          position: absolute;
+          top: 12px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__item {
+      &:last-child {
+        padding-bottom: 30px;
+      }
+    }
+
+    &__footer {
+      flex-wrap: wrap;
+    }
+
+    &__left, &__right {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+}
