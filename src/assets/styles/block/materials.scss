@@ -1,5 +1,5 @@
 .materials {
-  padding: 100px 15px;
+  padding: 40px 15px 100px;
 
   &__title {
     padding-bottom: 80px;
@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 1200px) {
   .materials {
-    padding: 80px 15px;
+    padding: 35px 15px 80px;
 
     &__title {
       padding-bottom: 60px;
@@ -124,7 +124,7 @@
 
 @media screen and (max-width: 991px) {
   .materials {
-    padding: 50px 15px;
+    padding: 35px 15px 50px;
 
     &__title {
       padding-bottom: 40px;

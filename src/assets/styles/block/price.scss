@@ -1,0 +1,156 @@
+.price {
+  padding: 40px 15px 115px;
+
+  &__title {
+    padding-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__block {
+    padding-bottom: 50px;
+    max-width: 840px;
+  }
+
+  &__line {
+    display: flex;
+    padding: 9px 0;
+    align-items: center;
+    border-bottom: 1px solid $gray;
+
+    &:first-child, &:first-of-type {
+      border-top: 1px solid $gray;
+    }
+  }
+
+  &__name, &__type, &__num {
+    font-size: 14px;
+    padding-right: 15px;
+  }
+
+  &__name {
+    width: 60%;
+  }
+
+  &__type {
+    width: 30%;
+  }
+
+  &__num {
+    width: 10%;
+    font-weight: 700;
+  }
+
+  &__form {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .price {
+    padding: 20px 15px 50px;
+
+    &__title {
+      padding-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-weight: 700;
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+
+    &__block {
+      padding-bottom: 30px;
+      max-width: 840px;
+    }
+
+    &__line {
+      display: flex;
+      padding: 7px 0;
+    }
+
+    &__name, &__type, &__num {
+      font-size: 12px;
+      padding-right: 10px;
+    }
+
+    &__name {
+      width: 60%;
+    }
+
+    &__type {
+      width: 25%;
+    }
+
+    &__num {
+      width: 15%;
+      font-weight: 700;
+    }
+
+    &__form {
+      margin-bottom: 50px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 479px) {
+  .price {
+    padding: 15px;
+
+    &__title {
+      padding-bottom: 15px;
+    }
+
+    &__subtitle {
+      font-weight: 700;
+      font-size: 14px;
+      padding-bottom: 15px;
+    }
+
+    &__block {
+      padding-bottom: 20px;
+      max-width: 840px;
+      width: 100%;
+    }
+
+    &__line {
+      display: flex;
+      padding: 7px 0;
+      flex-wrap: wrap;
+    }
+
+    &__name, &__type, &__num {
+      font-size: 12px;
+      padding-right: 10px;
+    }
+
+    &__name {
+      width: 100%;
+    }
+
+    &__type {
+      width: 100%;
+      padding: 5px 0 0;
+      font-weight: 600;
+    }
+
+    &__num {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 14px;
+      width: 100%;
+      font-weight: 700;
+    }
+
+    &__form {
+      margin-bottom: 30px;
+    }
+  }
+
+}

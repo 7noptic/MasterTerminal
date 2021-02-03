@@ -1,0 +1,16 @@
+.rating-star {
+  & > li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url('../img/ratingstar.svg');
+opacity: .3;
+    &.active {
+      background-image: url('../img/ratingstaractive.svg');
+      opacity: 1;
+    }
+  }
+}

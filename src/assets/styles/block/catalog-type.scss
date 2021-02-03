@@ -1,0 +1,62 @@
+.catalog-type {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:hover {
+      & > .catalog-type__name {
+        color: $orange;
+      }
+    }
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+
+  &__name {
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  &__more {
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #C0C6CE;
+    margin-top: 20px;
+    padding-top: 20px;
+    display: block;
+    position: relative;
+
+    &.top {
+      &::before {
+        content: url("../img/arrcatalog.svg");
+        position: absolute;
+        top: -6px;
+        left: 47%;
+        display: block;
+        transform: rotate(180deg);
+      }
+    }
+
+    &::before {
+      content: url("../img/arrcatalog.svg");
+      position: absolute;
+      top: 0;
+      left: 47%;
+      display: block;
+
+    }
+  }
+}
+@media screen and (max-width: 767px){
+ .catalog-type{
+   display: none;
+   &.active{
+     display: block;
+   }
+ }
+}

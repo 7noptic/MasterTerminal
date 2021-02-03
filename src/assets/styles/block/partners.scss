@@ -7,6 +7,15 @@
     position: relative;
     padding: 0 100px;
   }
+  &-prev, &-next {
+    width: 45px;
+    height: 45px;
+
+    & > svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
 }
 @media screen and (max-width: 1080px){
   .partners{

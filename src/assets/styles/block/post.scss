@@ -1,0 +1,179 @@
+.post {
+  padding: 40px 15px 120px;
+
+  display: flex;
+
+  &__content {
+    width: 50%;
+    padding-right: 15px;
+  }
+
+  &__title {
+    padding-bottom: 60px;
+  }
+
+  &__text {
+    padding: 30px 0;
+    font-size: 14px;
+  }
+
+  &__link {
+    display: flex;
+    font-size: 14px;
+    font-weight: 800;
+    align-items: center;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    & > svg {
+      margin-right: 15px;
+    }
+  }
+
+  &__img {
+    max-height: 320px;
+  }
+
+  &__aside {
+    width: 50%;
+
+  }
+
+  &__list {
+    width: 50%;
+    margin: 0 auto !important;
+
+    & > li {
+      padding-bottom: 30px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .post {
+    padding: 40px 15px 100px;
+
+    &__content {
+      width: 60%;
+      padding-right: 15px;
+    }
+
+    &__title {
+      padding-bottom: 50px;
+    }
+
+
+    &__aside {
+      width: 40%;
+
+    }
+
+    &__list {
+      width: 60%;
+
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .post {
+    padding: 35px 15px 100px;
+
+    &__content {
+      width: 70%;
+      padding-right: 15px;
+    }
+
+    &__title {
+      padding-bottom: 50px;
+    }
+
+
+    &__aside {
+      width: 30%;
+
+    }
+
+    &__list {
+      width: 85%;
+
+      & > li {
+        padding-bottom: 20px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .post {
+    padding: 30px 15px 80px;
+
+    &__content {
+      width: 70%;
+      padding-right: 15px;
+    }
+
+    &__title {
+      padding-bottom: 35px;
+    }
+
+
+    &__aside {
+      width: 30%;
+
+    }
+
+    &__list {
+      width: 95%;
+
+      & > li {
+        padding-bottom: 15px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .post {
+    padding: 15px 15px 30px;
+    flex-wrap: wrap;
+
+    &__content {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    &__title {
+      padding-bottom: 20px;
+    }
+
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__aside {
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    &__list {
+      width: 100%;
+
+      & > li {
+        padding-bottom: 15px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -86,6 +86,9 @@
       border-radius: 4px 4px 0px 0px;
       border: 1px solid #C0C6CE;
     }
+    &-last {
+      border-radius: 0px 0px 4px 4px;
+    }
   }
 
   &__textarea {

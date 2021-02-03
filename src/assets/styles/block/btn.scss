@@ -1,4 +1,5 @@
 .btn{
+  display: inline-block;
   color: #fff;
   font-weight: 800;
   font-size: 14px;
@@ -7,7 +8,30 @@
   background-color: $orange;
   border-radius: $radiusBtn;
   text-transform: uppercase;
+  cursor: pointer;
   &:hover{
     background-color: $yellow;
+  }
+  &-gray{
+    background-color: #C0C6CE;
+    &:hover{
+      background-color: $orange;
+    }
+  }
+  &-white{
+    background-color: #fff;
+    border-radius: 4px 4px 0px 0px;
+    border: 1px dashed #2C415B;
+    color: $blue;
+
+    &:hover{
+      color: #fff;
+    }
+  }
+  &-blue{
+    background-color: $blue;
+    &:hover{
+      background-color: $orange;
+    }
   }
 }

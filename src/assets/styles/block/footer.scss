@@ -1,3 +1,43 @@
+#footer-menu1, #footer-menu2, #footer-menu3 {
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > a {
+      display: inline-block;
+      font-size: 12px;
+      padding-bottom: 10px;
+
+      &-big {
+        display: block;
+        font-size: 16px;
+      }
+
+      & > svg {
+        opacity: .3;
+        margin-right: 20px;
+      }
+
+      &:hover {
+        color: $orange;
+
+        & > svg {
+          opacity: 1;
+
+        }
+
+        & > svg > g > path:first-child, path:first-of-type {
+          fill: $orange;
+        }
+      }
+    }
+  }
+}
+
 .footer {
   padding: 0 15px;
 
@@ -75,7 +115,7 @@
 
   &__right > &__link {
     display: flex;
-    padding-left: 20px;
+    padding-right: 15px;
   }
 
   &__btn {
@@ -185,6 +225,20 @@
 }
 
 @media screen and (max-width: 767px) {
+  #footer-menu1, #footer-menu2, #footer-menu3 {
+    margin: 0;
+    padding: 0;
+
+    & > li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      & > a {
+        padding-bottom: 8px;
+      }
+    }
+  }
   .footer {
     &__block {
       width: 50%;
@@ -228,6 +282,10 @@
           }
         }
       }
+    }
+
+    &__title {
+      cursor: pointer;
     }
 
     &__menu {
