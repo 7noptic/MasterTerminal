@@ -25,7 +25,8 @@
   &__left {
 
   }
-  &__top{
+
+  &__top {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -74,27 +75,41 @@
     display: flex;
     flex-wrap: wrap;
     width: 25%;
+
+    &__title {
+      padding-bottom: 40px;
+    }
+
     &__img {
       width: 100%;
       max-height: 50px;
     }
 
     &__text {
+      padding-top: 20px;
       font-size: 12px;
       width: 100%;
 
     }
   }
-  &__bottom{
+
+  &__bottom {
     width: 100%;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     padding-top: 80px;
   }
-&__board{
-  width: 100%;
-}
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__board {
+    width: 100%;
+  }
+
   &__right {
     padding-left: 15px;
   }
@@ -188,59 +203,84 @@
   }
 
 }
-@media screen and (max-width: 991px){
-  .card{
-    &__left{
+
+@media screen and (max-width: 991px) {
+  .card {
+    &__left {
 
     }
-    &__line{
+
+    &__line {
       padding: 8px 10px;
     }
-    &__block{
+
+    &__block {
       padding: 10px 0;
       width: 100%;
     }
-    &__list{
+
+    &__list {
       padding: 10px 0 15px !important;
     }
-    &-plus{
+
+    &-plus {
       width: 50%;
       padding-bottom: 30px;
+      &__title {
+        padding-bottom: 30px;
+      }
     }
   }
 }
-@media screen and (max-width: 767px){
-  .card{
-    &__left,&__right{
+
+@media screen and (max-width: 767px) {
+  .card {
+    &__left, &__right {
       padding-left: 0;
       width: 100%;
     }
-    &__line{
+
+    &__line {
     }
-    &__block{
+
+    &__block {
       width: 48%;
     }
-    &__list{
+
+    &__list {
     }
-    &-plus{
+
+    &-plus {
       width: 25%;
       padding-bottom: 30px;
+      &__title {
+        padding-bottom: 20px;
+      }
+      &__text {
+        padding-top: 15px;
+
+      }
     }
   }
 }
-@media screen and (max-width: 575px){
-  .card{
-    &__left,&__right{
+
+@media screen and (max-width: 575px) {
+  .card {
+    &__left, &__right {
 
     }
-    &__line{
+
+    &__line {
     }
-    &__block{
+
+    &__block {
       width: 100%;
     }
-    &__list{
+
+    &__list {
     }
-    &-plus{
+
+    &-plus {
       width: 50%;
       padding-bottom: 30px;
     }

@@ -124,7 +124,7 @@
 
 @media screen and (max-width: 991px) {
   .materials {
-    padding: 35px 15px 50px;
+    padding: 60px 15px 50px;
 
     &__title {
       padding-bottom: 40px;
@@ -167,7 +167,7 @@
 
 @media screen and (max-width: 767px) {
   .materials {
-    padding: 30px 15px;
+    padding: 50px 15px;
 
     &__title {
       padding-bottom: 25px;
@@ -200,9 +200,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 479px) {
   .materials {
-    padding: 15px;
+    padding: 30px 15px;
 
     &__title {
       padding-bottom: 15px;

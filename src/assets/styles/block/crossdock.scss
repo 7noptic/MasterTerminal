@@ -46,7 +46,7 @@
 
   &__right {
     border-radius: 0 4px 4px 0;
-    background-image: url('../img/bgban.jpg');
+    background-image: url('../img/bgban-min.jpg');
     background-position: center;
     background-size: cover;
   }
@@ -155,7 +155,7 @@
   }
 
   &__board {
-    padding: 30px 0 70px;
+    padding: 30px 0;
   }
 
   &__item {
@@ -343,7 +343,7 @@
     }
 
     &__board {
-      padding: 20px 0 50px;
+      padding: 20px 0;
     }
 
     &__item {
@@ -390,9 +390,11 @@
     &__star {
       margin-right: 15px !important;
     }
+
     &__left {
       padding: 20px;
       width: 100%;
+
       & > .crossdock__subtitle {
         width: 100%;
         padding-bottom: 30px;
@@ -412,7 +414,7 @@
       width: 45%;
       font-size: 18px;
       font-weight: 700;
-display: flex;
+      display: flex;
       align-items: center;
     }
 
@@ -426,33 +428,20 @@ display: flex;
       justify-content: center;
     }
 
-
     &__right {
       display: none;
     }
-
 
     &__wrapper {
       flex-wrap: wrap;
     }
 
-
-
-
-
     &__text {
       padding-bottom: 20px;
     }
 
-
-
-
-    &__board {
-      padding: 20px 0 30px;
-    }
-
     &__item {
-      width: 50%!important;
+      width: 50% !important;
       padding-right: 5% !important;
 
       & > .question__name {
@@ -471,7 +460,6 @@ display: flex;
     }
 
 
-
     &-arr {
       margin-bottom: 30px;
       font-size: 13px;
@@ -479,13 +467,16 @@ display: flex;
     }
   }
 }
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 479px) {
   .crossdock {
     padding: 15px 15px 30px;
-&__title{
-  flex-wrap: wrap;
 
-}
+    &__title {
+      flex-wrap: wrap;
+
+    }
+
     &__rating {
       width: 100%;
       padding-top: 10px;
@@ -517,22 +508,13 @@ display: flex;
     }
 
 
-
-
-
     &__text {
       padding-bottom: 20px;
     }
 
 
-
-
-    &__board {
-      padding: 20px 0 30px;
-    }
-
     &__item {
-      width: 50%!important;
+      width: 50% !important;
       padding-right: 5% !important;
 
       & > .question__name {
@@ -551,7 +533,6 @@ display: flex;
     }
 
 
-
     &__price {
       width: 100%;
     }
@@ -561,6 +542,7 @@ display: flex;
       margin-left: 0;
       margin-top: 15px;
     }
+
     &-arr {
       margin-bottom: 30px;
       font-size: 13px;

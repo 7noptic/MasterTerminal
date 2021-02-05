@@ -4,6 +4,8 @@
     color: #fff;
     line-height: 14px;
   }
-  &__wrapper{
+  &-wrapper{
+    display: flex;
+    flex-wrap: wrap;
   }
 }

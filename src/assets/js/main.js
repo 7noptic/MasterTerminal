@@ -69,6 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
             });
 
         });
+        $('[type="tel"]').mask("+7 (999) 999-99-99");
         /* BURGER-MENU */
         let headerMenu = document.querySelector('.header__nav'),
             header = document.querySelector('.header'),
@@ -172,7 +173,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
         new Readmore('.card__readmore', {
             speed: 75,
-            collapsedHeight: 230,
+            collapsedHeight: 225,
             moreLink: '<a href="#" class="catalog-type__more card__more">Показать еще</a>',
             lessLink: '<a href="#" class="catalog-type__more card__more top">Скрыть</a>',
         });
