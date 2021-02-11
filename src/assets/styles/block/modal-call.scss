@@ -1,4 +1,4 @@
-.modal-call,.modal-call-noarea,.modal-call-email,.modal-call-email-num {
+.modal-call, .modal-call-noarea, .modal-email, .modal-email-num {
   position: fixed;
   top: 0;
   height: 100%;
@@ -19,10 +19,7 @@
     max-width: 320px;
     height: 100%;
     overflow: auto;
-
   }
-
-
 
 
   &__exit {
@@ -31,8 +28,9 @@
     top: 5px;
     right: 5px;
     cursor: pointer;
-z-index: 1001;
-    &::before{
+    z-index: 1001;
+
+    &::before {
       width: 100%;
       height: 100%;
       content: '';
@@ -40,6 +38,7 @@ z-index: 1001;
       position: absolute;
       top: 0;
       left: 0;
+
       &:hover {
         .modal-call__exit > path {
           fill: $orange;
@@ -47,13 +46,9 @@ z-index: 1001;
         }
       }
     }
+
     & path, & rect {
       transition: $transition4;
     }
-
-
   }
-
-
-
 }
