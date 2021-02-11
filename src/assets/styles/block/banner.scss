@@ -1,20 +1,24 @@
 .banner {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  &__img {
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  position: relative;
+    position: relative;
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(270deg, #000000 -26.46%, rgba(0, 0, 0, 0) 66.93%);
-    z-index: 2;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(270deg, #000000 -26.46%, rgba(0, 0, 0, 0) 66.93%);
+      z-index: 2;
+    }
   }
+
 
   &__wrapper {
     padding: 120px 15px;
@@ -27,10 +31,20 @@
 
   &__block {
     width: 77%;
+    padding-top: 80px;
   }
 
   &__form {
+    position: absolute;
+    top: 0;
     width: 23%;
+    z-index: 100000;
+    height: 100%;
+    max-width: 320px;
+    right: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &-btn {
       display: block;
@@ -86,6 +100,7 @@
       border-radius: 4px 4px 0px 0px;
       border: 1px solid #C0C6CE;
     }
+
     &-last {
       border-radius: 0px 0px 4px 4px;
     }
@@ -102,6 +117,38 @@
 
   &__agremeent {
 
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .banner {
+    &__form {
+      position: absolute;
+      top: 0;
+      width: 23%;
+      z-index: 100000;
+      height: 100%;
+      max-width: 320px;
+      right: calc(15px + (340 - 15) * ((100vw - 1279px) / (1920 - 1279)));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-btn {
+        display: block;
+        width: 100%;
+        padding: 13px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .banner {
+    &__form {
+      right: 15px;
+    }
   }
 }
 
@@ -139,10 +186,10 @@
 
   }
 }
+
 @media screen and (max-width: 991px) {
   .banner {
     &__wrapper {
-      padding: 50px 15px;
     }
 
     &__block {
@@ -173,6 +220,7 @@
 
   }
 }
+
 @media screen and (max-width: 767px) {
   .banner {
     &__wrapper {
@@ -186,13 +234,18 @@
     }
 
     &__form {
+      display: none;
+      position: relative;
       width: 100%;
+      right: 0;
 
     }
-&__btn{
-  display: inline-block;
-  margin-bottom: 30px;
-}
+
+    &__btn {
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
     &__title {
       font-size: 30px;
       padding-bottom: 15px;

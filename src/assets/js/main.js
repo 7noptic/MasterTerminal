@@ -147,6 +147,11 @@ window.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
+            /* search */
+            let searchForm = document.querySelector('.header-search__wrapper');
+            if (target && (target.classList.contains('js-search'))) {
+                searchForm.classList.toggle('active');
+            }
 
         });
 
@@ -291,6 +296,27 @@ window.addEventListener('DOMContentLoaded', () => {
             }
 
         });
+        let swiperBanner = new Swiper('.swiper-container-banner', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            //Инициализация в табах
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: '.banner-next',
+                prevEl: '.banner-prev',
+            },
+            // Responsive breakpoints
+            breakpoints: {
+
+
+
+
+
+            }
+
+        });
+
         let swiperCard = new Swiper('.swiper-container-card', {
             direction: 'vertical',
             slidesPerView: 4,
