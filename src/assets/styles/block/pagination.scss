@@ -1,3 +1,39 @@
+.nav-links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  & > a, & > span {
+    display: block;
+    padding-right: 15px;
+    font-size: 16px;
+    color: $blue;
+    line-height: 18px;
+  }
+
+  & > .current {
+    display: block;
+    padding-right: 15px;
+    font-size: 16px;
+    color: $blue;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  & > .prev, & > .next {
+    font-size: 16px;
+    color: $blue;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  & > .prev {
+    padding-right: 40px;
+  }
+   & > .next {
+    padding-left: 40px;
+  }
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -32,6 +68,41 @@
 }
 
 @media (max-width: 991px) {
+  .nav-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    & > a, & > span {
+      display: block;
+      padding-right: 13px;
+      font-size: 14px;
+      color: $blue;
+      line-height: 17px;
+    }
+
+    & > .current {
+      display: block;
+      padding-right: 13px;
+      font-size: 14px;
+      color: $blue;
+      font-weight: 600;
+      line-height: 17px;
+    }
+
+    & > .prev, & > .next {
+      font-size: 14px;
+      color: $blue;
+      font-weight: 500;
+      line-height: 17px;
+    }
+    & > .prev {
+      padding-right: 30px;
+    }
+    & > .next {
+      padding-left: 30px;
+    }
+  }
   .pagination {
     margin-bottom: 30px;
     padding: 80px 0 30px;
@@ -66,5 +137,40 @@
   .pagination {
     margin-bottom: 0;
     padding: 35px 0;
+  }
+  .nav-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    & > a, & > span {
+      display: block;
+      padding-right: 10px;
+      font-size: 13px;
+      color: $blue;
+      line-height: 16px;
+    }
+
+    & > .current {
+      display: block;
+      padding-right: 10px;
+      font-size: 13px;
+      color: $blue;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    & > .prev, & > .next {
+      font-size: 13px;
+      color: $blue;
+      font-weight: 500;
+      line-height: 16px;
+    }
+    & > .prev {
+      padding-right: 20px;
+    }
+    & > .next {
+      padding-left: 20px;
+    }
   }
 }
