@@ -207,7 +207,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if (tagsReadMore) {
             tagsReadMore.addEventListener('click', (event) => {
                 event.preventDefault();
-                console.log('asdf');
                 let tagsItem = document.querySelectorAll('.js-tags-more');
                 tagsItem.forEach(item => {
                     if (item.classList.toggle('active')) {
@@ -414,7 +413,6 @@ window.addEventListener('DOMContentLoaded', () => {
             window.addEventListener('scroll', function onScroll() {
 
                 if (window.pageYOffset > numberTop - window.innerHeight / 2) {
-                    console.log('worj');
                     this.removeEventListener('scroll', onScroll);
                     let interval = setInterval(function () {
                         number[0].innerHTML = +number[0].innerHTML + 1;

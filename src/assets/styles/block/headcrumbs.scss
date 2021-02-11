@@ -1,55 +1,44 @@
-.headcrumbs,.breadcrumbs {
+.headcrumbs, .breadcrumbs {
   padding: 40px 15px;
   display: flex;
   flex-wrap: wrap;
 
-
-  & > a {
+  & > span {
     opacity: .5;
     padding-right: 15px;
-    position: relative;
     font-size: 12px;
+    & > a {
 
-    &:hover {
-      color: $orange;
-      &::after {
-        color: #000;
+
+      position: relative;
+      font-size: 12px;
+
+      &:hover {
+        color: $orange;
       }
     }
-    &::after {
-      content: '/';
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 5px;
-    }
 
-    &:last-child, &:last-of-type {
+    &.current {
       opacity: 1;
-      padding-right: 0;
-
-      &::after {
-        content: '';
-      }
     }
-  }
-  &__link{
-
   }
 }
-@media screen and (max-width: 991px){
+
+@media screen and (max-width: 991px) {
   .headcrumbs {
     padding: 30px 15px;
 
   }
 }
-@media screen and (max-width: 767px){
+
+@media screen and (max-width: 767px) {
   .headcrumbs {
     padding: 20px 15px;
 
   }
 }
-@media screen and (max-width: 575px){
+
+@media screen and (max-width: 575px) {
   .headcrumbs {
     padding: 15px;
 
