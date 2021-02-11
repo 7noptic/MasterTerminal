@@ -1,8 +1,52 @@
+.table-responsive {
+  & > table {
+    padding-bottom: 50px;
+    max-width: 840px;
+    width: 100%;
+
+    & > tbody {
+      & > tr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 0;
+        border-bottom: 1px solid $gray;
+
+        &:first-child, &:first-of-type {
+          border-top: 1px solid $gray;
+        }
+        & > td {
+          font-size: 14px;
+          display: flex;
+          justify-content: flex-start;
+          &:first-child {
+            width: 5%;
+            font-weight: 700;
+          }
+
+          &:nth-child(2) {
+            width: 65%;
+          }
+
+          &:nth-child(3) {
+            width: 15%;
+          }
+          &:nth-child(4) {
+            width: 15%;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
+
 .price {
   padding: 40px 15px 115px;
 
   &__title {
     padding-bottom: 40px;
+    text-transform: capitalize !important;
   }
 
   &__subtitle {
@@ -51,6 +95,45 @@
 }
 
 @media screen and (max-width: 767px) {
+  .table-responsive {
+    & > table {
+      padding-bottom: 50px;
+      max-width: 840px;
+      width: 100%;
+
+      & > tbody {
+        & > tr {
+          padding: 7px 0;
+
+          &:first-child, &:first-of-type {
+            border-top: 1px solid $gray;
+          }
+          & > td {
+            font-size: 12px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: flex-start;
+            &:first-child {
+              width: 5%;
+              font-weight: 700;
+            }
+
+            &:nth-child(2) {
+              width: 65%;
+            }
+
+            &:nth-child(3) {
+              width: 15%;
+            }
+            &:nth-child(4) {
+              width: 15%;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
   .price {
     padding: 20px 15px 50px;
 
@@ -99,7 +182,50 @@
 
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 575px) {
+  .table-responsive {
+    & > table {
+      padding-bottom: 50px;
+      max-width: 840px;
+      width: 100%;
+
+      & > tbody {
+        & > tr {
+          padding: 7px 0;
+          flex-wrap: wrap;
+          &:first-child, &:first-of-type {
+            border-top: 1px solid $gray;
+          }
+          & > td {
+            font-size: 12px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: flex-start;
+            &:first-child {
+              width: 5%;
+              font-weight: 700;
+            }
+
+            &:nth-child(2) {
+              width: 80%;
+            }
+
+            &:nth-child(3) {
+              width: 15%;
+            }
+            &:nth-child(4) {
+              padding-top: 10px;
+              display: flex;
+              justify-content: flex-end;
+              font-size: 14px;
+              width: 100%;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
   .price {
     padding: 15px;
 
