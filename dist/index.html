@@ -1483,9 +1483,16 @@
         </h2>
         <form action="POST" class="form">
           <div class="form-wrapper">
-            <input type="text" name="your-name" class="input block-form__input" placeholder="Ваше имя">
-            <input type="tel" name="your-tel" class="input block-form__input" placeholder="Номер телефона">
-            <input type="email" name="your-email" class="input block-form__input" placeholder="Email">
+            <div>
+              <input type="text" name="your-name" class="input block-form__input block-form__input-first" placeholder="Ваше имя">
+            </div>
+            <div>
+              <input type="tel" name="your-tel" class="input block-form__input" placeholder="Номер телефона">
+            </div>
+            <div>
+              <input type="email" name="your-email" class="input block-form__input block-form__input-last" placeholder="Email">
+            </div>
+
             <a href="#" class="btn block-form__btn">оставить заявку</a>
             <p class="form__agreement block-form__agreement">
               Нажимая на кнопку «Оставить заявку», вы соглашаетесь на обработку персональных данных в

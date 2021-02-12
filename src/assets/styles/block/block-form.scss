@@ -38,18 +38,18 @@
   }
 
   &__input {
-    width: 25%;
+    width: 100%;
     border-top: 1px solid #C0C6CE;
     border-bottom: 1px solid #C0C6CE;
     border-right: 1px solid #C0C6CE;
 
 
-    &:first-child, &:first-of-type {
+    &-first {
       border-radius: 4px 0px 0px 4px;
       border-left: 1px solid #C0C6CE;
     }
 
-    &:last-child, &:last-of-type {
+    &-last {
       border-radius: 0px 4px 4px 0px;
     }
   }
@@ -71,6 +71,9 @@
 }
 
 @media screen and (max-width: 991px) {
+  .form-wrapper>div{
+    width: 33%;
+  }
   .block-form {
     &__wrapper {
       padding: 40px 15px;
@@ -87,7 +90,6 @@
 
 
     &__input {
-      width: 33%;
     }
 
     &__btn {
@@ -109,6 +111,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .form-wrapper>div{
+    width: 100%;
+  }
   .block-form {
     &__wrapper {
       padding: 30px 15px;
@@ -128,12 +133,12 @@
       border-left: 1px solid #C0C6CE;
 
 
-      &:first-child, &:first-of-type {
+      &-first {
         border-radius: 4px 4px 0px 0px;
         border-top: 1px solid #C0C6CE;
       }
 
-      &:last-child, &:last-of-type {
+      &-last {
         border-radius: 0px 0px 4px 4px;
       }
     }
