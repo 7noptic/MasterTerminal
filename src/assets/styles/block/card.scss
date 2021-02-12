@@ -9,7 +9,18 @@
     z-index: 21;
 
   }
-
+  &__top-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+    margin-bottom: -10px;
+    & > ul, & > h3, & > div, & > a{
+      width: 48%;
+      padding-bottom: 20px;
+    }
+  }
   &__prev {
     top: 0;
   }
