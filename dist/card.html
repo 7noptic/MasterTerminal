@@ -204,14 +204,26 @@
       <div class="card__right">
         <h1 class="title card__title">Обрезная доска 47x250x5700 мм 1-4 сорт ель</h1>
         <div class="board card__board">
-          <div class="card__block">
+          <div class="card__top-info">
             <ul class="rating-star card__rating">
               <li class="active"></li>
               <li class="active"></li>
               <li class="active"></li>
               <li class="active"></li>
               <li></li>
-            </ul>
+            </ul><a href="#" class="card__subtitle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path d="M13.5938 2.73467V0.0227051H0V10.1374H2.40528V12.8493H9.03845L13.6966 15.9769V12.8493H15.9995V2.73467H13.5938ZM1.41543 8.72193V1.43813H12.1783V2.73467H2.40576V8.72146L1.41543 8.72193ZM13.3211 7.06682H4.93041V5.65139H13.322L13.3211 7.06682ZM13.3211 9.83021H4.93041V8.41478H13.322L13.3211 9.83021Z" fill="#2C415B" />
+                  <path d="M13.3211 7.0668H4.9304V5.65137H13.322L13.3211 7.0668ZM13.3211 9.83018H4.9304V8.41475H13.322L13.3211 9.83018Z" fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="15.9995" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg> Отзывов: 458</a>
+          </div>
+          <div class="card__block">
             <div class="card__readmore">
               <div class="card__line">
                 <p class="card__text">Толщина, мм:</p>
@@ -256,17 +268,6 @@
             </div>
           </div>
           <div class="card__block">
-            <h3 class="card__subtitle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0)">
-                  <path d="M13.5938 2.73467V0.0227051H0V10.1374H2.40528V12.8493H9.03845L13.6966 15.9769V12.8493H15.9995V2.73467H13.5938ZM1.41543 8.72193V1.43813H12.1783V2.73467H2.40576V8.72146L1.41543 8.72193ZM13.3211 7.06682H4.93041V5.65139H13.322L13.3211 7.06682ZM13.3211 9.83021H4.93041V8.41478H13.322L13.3211 9.83021Z" fill="#2C415B" />
-                  <path d="M13.3211 7.0668H4.9304V5.65137H13.322L13.3211 7.0668ZM13.3211 9.83018H4.9304V8.41475H13.322L13.3211 9.83018Z" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect width="15.9995" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg> Отзывов: 458</h3>
             <div class="card-price">
               <div class="card-price__line">
                 <p class="card-price__text">цена за шт</p>
@@ -848,21 +849,55 @@
           </div>
         </div>
       </div>
-      <form action="POST" class="form banner__form reviews__form">
-        <div class="form__wrapper reviews__wrapper"><input type="text" name="your-name" class="input banner__input banner__input-first" placeholder="Ваше имя"> <input type="email" name="your-email" class="input banner__input" placeholder="Email"> <textarea name="your-message" class="textarea banner__textarea" cols="30" rows="10" placeholder="Сообщение"></textarea>
-          <div class="reviews__line">
-            <div class="reviews__label">Ваша оценка</div>
-            <ul class="rating-star reviews__rating js-rating">
-              <li class="active"></li>
-              <li class="active"></li>
-              <li class=""></li>
-              <li class=""></li>
-              <li class=""></li>
-            </ul><input type="hidden" class="" value="2" name="rating" id="js-rating">
+      <div class="reviews__form">
+        <form action="POST" class="form">
+          <div class="form__wrapper reviews__wrapper"><input type="text" name="your-name" class="input banner__input banner__input-first" placeholder="Ваше имя"> <input type="email" name="your-email" class="input banner__input" placeholder="Email"> <textarea name="your-message" class="textarea banner__textarea" cols="30" rows="10" placeholder="Сообщение"></textarea>
+            <div class="reviews__line">
+              <div class="reviews__label">Ваша оценка</div>
+              <ul class="rating-star reviews__rating js-rating">
+                <li class="active"></li>
+                <li class="active"></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+              </ul><input type="hidden" class="" value="2" name="rating" id="js-rating">
+            </div>
+            <p class="reviews__label">Хотели бы вы добавить своё фото?</p><label for="upload-photo" class="btn btn-white reviews__btn reviews__btn-white">Загрузить фото</label> <input type="file" class="reviews__upload" name="photo" id="upload-photo"> <a href="#" class="btn banner__form-btn reviews__btn">оставить отзыв</a>
           </div>
-          <p class="reviews__label">Хотели бы вы добавить своё фото?</p><label for="upload-photo" class="btn btn-white reviews__btn reviews__btn-white">Загрузить фото</label> <input type="file" class="reviews__upload" name="photo" id="upload-photo"> <a href="#" class="btn banner__form-btn reviews__btn">оставить отзыв</a>
-        </div>
-      </form>
+        </form>
+      </div>
+      <!--
+        <form action="POST" class="form banner__form reviews__form">
+
+            <div class="form__wrapper reviews__wrapper">
+                <input type="text" name="your-name" class="input banner__input banner__input-first"
+                       placeholder="Ваше имя">
+                <input type="email" name="your-email" class="input banner__input" placeholder="Email">
+                <textarea name="your-message" class="textarea banner__textarea" cols="30" rows="10"
+                          placeholder="Сообщение"></textarea>
+                <div class="reviews__line">
+                    <div class="reviews__label">
+                        Ваша оценка
+                    </div>
+                    <ul class="rating-star reviews__rating js-rating">
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                    </ul>
+                    <input type="hidden" class="" value="2" name="rating" id="js-rating">
+                </div>
+                <p class="reviews__label">
+                    Хотели бы вы добавить своё фото?
+                </p>
+                <label for="upload-photo" class="btn btn-white reviews__btn reviews__btn-white">Загрузить фото</label>
+                <input type="file" class="reviews__upload" name="photo" id="upload-photo">
+                <a href="#" class="btn banner__form-btn reviews__btn">оставить отзыв</a>
+
+            </div>
+        </form>
+    -->
     </section>
   </main>
   <footer class="wrapper footer">
