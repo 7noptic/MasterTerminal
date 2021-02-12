@@ -14,7 +14,7 @@
       position: relative;
       & > a{
       display: inline-block;
-      padding-left: 25px;
+      padding-left: 25px!important;
         &::before{
           content: '';
             position: absolute;
@@ -31,8 +31,6 @@
       & > span{
         display: none;
       }
-
-     
     }
     & > .chosen{
       & > a{
