@@ -5,3 +5,11 @@ text-align: center;
   margin: 24px auto!important;
   display: table!important;
 }
+.woocommerce .star-rating{
+  font-size: 1.4em!important;
+  margin: 20px 0!important;
+  color: #FF5500!important;
+  &::before{
+    color: #FF5500!important;
+  }
+}
