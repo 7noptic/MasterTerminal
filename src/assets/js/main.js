@@ -315,7 +315,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
 
         });
-
+        
         let swiperCard = new Swiper('.swiper-container-card', {
             direction: 'vertical',
             slidesPerView: 4,
@@ -341,23 +341,28 @@ window.addEventListener('DOMContentLoaded', () => {
             },
 
         });
-        var galleryThumbs = new Swiper('.gallery-thumbs', {
+
+        let galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
             slidesPerView: 4,
             freeMode: true,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
-          });
-          var galleryTop = new Swiper('.gallery-top', {
+            controller: {
+                inverse: true,
+              },
+        });
+        
+        let galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
             thumbs: {
-              swiper: galleryThumbs
-            }
-          });
+              swiper: galleryThumbs,
+              slideThumbActiveClass: 'swiper-slide-thumb-active',
+            },
+            controller: {
+                inverse: true,
+              },
+        });
         /* CATALOG MEDIA LIST */
         const catalogParent = document.querySelector('.catalog__sidebar');
 
@@ -481,8 +486,31 @@ window.addEventListener('DOMContentLoaded', () => {
         }, {passive: true})
 
     },
+    
     {
         passive: true
     }
 )
 ;
+$(document).ready(function() {
+    let galleryThumbs = new Swiper('.swiper-container.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        controller: {
+          },
+    });
+    
+    let galleryTop = new Swiper('.swiper-container.gallery-top', {
+        spaceBetween: 10,
+        thumbs: {
+          swiper: galleryThumbs,
+          slideThumbActiveClass: 'swiper-slide-thumb-active',
+        },
+        
+    });
+    galleryTop.params.control = galleryThumbs;
+    galleryThumbs.params.control = galleryTop;
+    });

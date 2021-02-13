@@ -13,3 +13,12 @@ text-align: center;
     color: #FF5500!important;
   }
 }
+.wrapper{
+  position: relative!important;
+}
+.woocommerce span.onsale{
+  background-color: $orange!important;
+  left: 100px!important;
+  padding: 0 15px!important;
+  top: 0!important;
+}
