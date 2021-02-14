@@ -61,14 +61,26 @@ window.addEventListener('DOMContentLoaded', () => {
         let modalBlock = document.querySelector('.js-sidebars'),
             allModal = document.querySelectorAll('.js-sidebars > section'),
             modalCall = document.querySelector('.modal-call'),
-            modalRegion = document.querySelector('.modal-region');
+            modalRegion = document.querySelector('.modal-region'),
+            modalCallNoArea = document.querySelector('.modal-call-noarea'),
+            modalEmailNum = document.querySelector('.modal-email-num'),
+            modalEmail = document.querySelector('.modal-email');
 
         document.addEventListener('click', e => {
 
             let target = e.target;
 
-            if (target && (target.classList.contains('js-call') || target.classList.contains('modal-call__exit'))) {
+            if (target && (target.classList.contains('js-call') || target.classList.contains('modal-call__exit') || target.classList.contains('modal-call__btn'))) {
                 openCloseModal(modalCall);
+            }
+            if (target && (target.classList.contains('js-call-noarea') || target.classList.contains('modal-call-noarea__exit') || target.classList.contains('modal-call-noarea__btn'))) {
+                openCloseModal(modalCallNoArea);
+            }
+            if (target && (target.classList.contains('js-email') || target.classList.contains('modal-email__exit') || target.classList.contains('modal-email__btn'))) {
+                openCloseModal(modalEmail);
+            }
+            if (target && (target.classList.contains('js-email-num') || target.classList.contains('modal-email-num__exit') || target.classList.contains('modal-email-num__btn'))) {
+                openCloseModal(modalEmailNum);
             }
             if (target && (target.classList.contains('js-region') || target.classList.contains('modal-region__exit'))) {
                 openCloseModal(modalRegion);
@@ -224,9 +236,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 },
 
 
-
-
-
             }
 
         });
@@ -261,7 +270,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 },
 
 
-
             }
 
         });
@@ -276,16 +284,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.banner-prev',
             },
             // Responsive breakpoints
-            breakpoints: {
-
-
-
-
-
-            }
+            breakpoints: {}
 
         });
-        
+
         let swiperCard = new Swiper('.swiper-container-card', {
             direction: 'vertical',
             slidesPerView: 4,
@@ -312,7 +314,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         });
 
-        
 
         let galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
@@ -320,16 +321,16 @@ window.addEventListener('DOMContentLoaded', () => {
             freeMode: true,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
-            
+
         });
-        
+
         let galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
             thumbs: {
-              swiper: galleryThumbs,
-              slideThumbActiveClass: 'swiper-slide-thumb-active',
+                swiper: galleryThumbs,
+                slideThumbActiveClass: 'swiper-slide-thumb-active',
             },
-           
+
         });
         /* CATALOG MEDIA LIST */
         const catalogParent = document.querySelector('.catalog__sidebar');
@@ -452,16 +453,17 @@ window.addEventListener('DOMContentLoaded', () => {
             old_down = down;
             down = time;
         }, {passive: true})
-       
+
         /* FIX BTN FORMS */
-       let labelBtn = document.querySelector('.comment-form-attachment > label');
-   console.log(labelBtn);
-       if(labelBtn){
-           labelBtn.innerHTML = 'Загрузить файл';
-       };
+        let labelBtn = document.querySelector('.comment-form-attachment > label');
+        console.log(labelBtn);
+        if (labelBtn) {
+            labelBtn.innerHTML = 'Загрузить файл';
+        }
+        ;
     },
-    
-    
+
+
     {
         passive: true
     }
