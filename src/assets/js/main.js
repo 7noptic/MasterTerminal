@@ -1,10 +1,10 @@
 'use script';
 import $ from 'jquery';
-import Swiper, {Navigation, Pagination} from 'swiper';
+import Swiper, {Navigation, Pagination, Thumbs} from 'swiper';
 import Readmore from "readmore-js";
 import GLightbox from 'glightbox';
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Thumbs]);
 window.addEventListener('DOMContentLoaded', () => {
         const lightbox = GLightbox({});
         $('.select').each(function () {
@@ -342,15 +342,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
         });
 
+        
+
         let galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
             slidesPerView: 4,
             freeMode: true,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
-            controller: {
-                inverse: true,
-              },
+            
         });
         
         let galleryTop = new Swiper('.gallery-top', {
@@ -359,9 +359,7 @@ window.addEventListener('DOMContentLoaded', () => {
               swiper: galleryThumbs,
               slideThumbActiveClass: 'swiper-slide-thumb-active',
             },
-            controller: {
-                inverse: true,
-              },
+           
         });
         /* CATALOG MEDIA LIST */
         const catalogParent = document.querySelector('.catalog__sidebar');
@@ -484,6 +482,7 @@ window.addEventListener('DOMContentLoaded', () => {
             old_down = down;
             down = time;
         }, {passive: true})
+       
 
     },
     
@@ -492,25 +491,3 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 )
 ;
-$(document).ready(function() {
-    let galleryThumbs = new Swiper('.swiper-container.gallery-thumbs', {
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        controller: {
-          },
-    });
-    
-    let galleryTop = new Swiper('.swiper-container.gallery-top', {
-        spaceBetween: 10,
-        thumbs: {
-          swiper: galleryThumbs,
-          slideThumbActiveClass: 'swiper-slide-thumb-active',
-        },
-        
-    });
-    galleryTop.params.control = galleryThumbs;
-    galleryThumbs.params.control = galleryTop;
-    });
