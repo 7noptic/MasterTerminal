@@ -1,4 +1,4 @@
-.swiper-container, .swiper-container-partners, .swiper-container-card, .swiper-container-more, .swiper-container-banner {
+.swiper-container, .swiper-container-partners, .swiper-container-card, .swiper-container-more, .swiper-container-banner, .swiper-container-prod {
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -13,7 +13,9 @@
 .swiper-container-card{
   max-height: 290px;
 }
-
+.swiper-container-prod{
+  width: 80%;
+}
 .swiper-button-next, .swiper-button-prev {
 
   z-index: 20;

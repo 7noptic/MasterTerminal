@@ -17,6 +17,17 @@
     }
   }
 }
+.prod{
+  &-prev, &-next {
+    width: 45px;
+    height: 45px;
+
+    & > svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
 @media screen and (max-width: 1080px){
   .partners{
     padding: 80px 15px;

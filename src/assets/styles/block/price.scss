@@ -1,4 +1,4 @@
-.table-responsive {
+.table-responsive,.price__block.crossdock__block {
   & > table {
     padding-bottom: 50px;
     max-width: 840px;
@@ -95,7 +95,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .table-responsive {
+  .table-responsive,.price__block.crossdock__block {
     & > table {
       padding-bottom: 50px;
       max-width: 840px;
@@ -183,7 +183,7 @@
 }
 
 @media screen and (max-width: 575px) {
-  .table-responsive {
+  .table-responsive,.price__block.crossdock__block {
     & > table {
       padding-bottom: 50px;
       max-width: 840px;
