@@ -483,8 +483,14 @@ window.addEventListener('DOMContentLoaded', () => {
             down = time;
         }, {passive: true})
        
-
+        /* FIX BTN FORMS */
+       let labelBtn = document.querySelector('.comment-form-attachment > label');
+   console.log(labelBtn);
+       if(labelBtn){
+           labelBtn.innerHTML = 'Загрузить файл';
+       };
     },
+    
     
     {
         passive: true
