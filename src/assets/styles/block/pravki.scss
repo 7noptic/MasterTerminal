@@ -192,13 +192,13 @@
   & > .logistic-form__row{
     margin-bottom: 0!important;
     &:first-of-type,&:first-child,&:nth-child(9){
-      & > input{
+      & span > input{
         border-top: 1px solid #C0C6CE!important;
         border-radius: 4px 4px 0 0!important;
       }
     }
     &:last-of-type,&:last-child,&:nth-child(7){
-      & > input{
+      & span > input{
 
         border-radius:0 0 4px 4px !important;
       }
@@ -206,24 +206,27 @@
     &:nth-child(8){
       margin: 15px 0!important;
     }
-    & > input{
+    & span > input{
       height: 45px!important;
       border-left: 1px solid #C0C6CE!important;
       border-right: 1px solid #C0C6CE!important;
       border-bottom: 1px solid #C0C6CE!important;
       border-top: none!important;
       border-radius: 0!important;
-
+      width: 50%;
     }
-    & > textarea{
+    & span > textarea{
       height: 90px!important;
       border-left: 1px solid #C0C6CE!important;
       border-right: 1px solid #C0C6CE!important;
       border-bottom: 1px solid #C0C6CE!important;
       border-top: none!important;
       border-radius: 0!important;
+      width: 50%;
     }
-
+&>label{
+  width: 50%;
+}
   }
   & > .logistic-form__submit{
     & > button{

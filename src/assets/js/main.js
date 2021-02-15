@@ -64,6 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
             modalRegion = document.querySelector('.modal-region'),
             modalCallNoArea = document.querySelector('.modal-call-noarea'),
             modalEmailNum = document.querySelector('.modal-email-num'),
+            modalLogistick = document.querySelector('.modal-logistic'),
             modalEmail = document.querySelector('.modal-email');
 
         document.addEventListener('click', e => {
@@ -72,6 +73,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
             if (target && (target.classList.contains('js-call') || target.classList.contains('modal-call__exit') || target.classList.contains('modal-call__btn'))) {
                 openCloseModal(modalCall);
+            }
+            if (target && (target.classList.contains('js-logistic') || target.classList.contains('modal-logistic__exit') || target.classList.contains('logistic-form__btn'))) {
+                openCloseModal(modalLogistick);
             }
             if (target && (target.classList.contains('js-call-noarea') || target.classList.contains('modal-call-noarea__exit') || target.classList.contains('modal-call-noarea__btn'))) {
                 openCloseModal(modalCallNoArea);
