@@ -132,6 +132,58 @@
       margin: 25px 0;
     }
 
+    & > div {
+      margin-bottom: 20px;
+
+      & > h2 {
+        margin-bottom: 20px;
+      }
+
+      & > p {
+        margin-bottom: 15px;
+      }
+
+      & > ul {
+        padding: 20px 0 !important;
+
+        & > li {
+          font-size: 14px;
+          padding-bottom: 10px;
+          position: relative;
+          padding-left: 15px;
+          list-style: none;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $gray;
+            position: absolute;
+            top: 8px;
+            left: 0px;
+          }
+        }
+      }
+
+      & > blockquote {
+        margin-bottom: 15px;
+      }
+    }
+
+    & > blockquote {
+      margin-bottom: 15px;
+    }
+
+    & > h2 {
+      margin-bottom: 20px;
+    }
+
+    & > p {
+      margin-bottom: 15px;
+    }
+
     & > ul {
       padding: 0 !important;
 
