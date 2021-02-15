@@ -64,18 +64,22 @@ window.addEventListener('DOMContentLoaded', () => {
             modalRegion = document.querySelector('.modal-region'),
             modalCallNoArea = document.querySelector('.modal-call-noarea'),
             modalEmailNum = document.querySelector('.modal-email-num'),
-            modalLogistick = document.querySelector('.modal-logistic'),
+            modalLogistic = document.querySelector('.modal-logistic'),
+            modalReviews = document.querySelector('.modal-serviceReviews'),
             modalEmail = document.querySelector('.modal-email');
 
         document.addEventListener('click', e => {
 
             let target = e.target;
 
+            if (target && (target.classList.contains('js-serviceReviews') || target.classList.contains('modal-serviceReviews__exit') || target.classList.contains('modal-serviceReviews__btn'))) {
+                openCloseModal(modalReviews);
+            }
             if (target && (target.classList.contains('js-call') || target.classList.contains('modal-call__exit') || target.classList.contains('modal-call__btn'))) {
                 openCloseModal(modalCall);
             }
             if (target && (target.classList.contains('js-logistic') || target.classList.contains('modal-logistic__exit') || target.classList.contains('logistic-form__btn'))) {
-                openCloseModal(modalLogistick);
+                openCloseModal(modalLogistic);
             }
             if (target && (target.classList.contains('js-call-noarea') || target.classList.contains('modal-call-noarea__exit') || target.classList.contains('modal-call-noarea__btn'))) {
                 openCloseModal(modalCallNoArea);

@@ -215,7 +215,7 @@ label.wp-comment-cookies-consent {
   & > div > form > .logistic-form__row {
     margin-bottom: 0 !important;
 
-    &:first-of-type, &:first-child, &:nth-child(10), &:nth-child(1), &:nth-child(0) {
+    &:first-of-type, &:first-child, &:nth-child(10), &:nth-child(1), &:nth-child(0), [name="PointShipment"] {
       & > span {
         width: 50%;
 
@@ -251,6 +251,7 @@ label.wp-comment-cookies-consent {
         border-radius: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
+        padding: 10px!important;
       }
 
       & > textarea {
@@ -263,6 +264,7 @@ label.wp-comment-cookies-consent {
         border-radius: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
+        padding: 10px!important;
       }
     }
 
@@ -316,7 +318,7 @@ label.wp-comment-cookies-consent {
           border-left: 1px solid #C0C6CE !important;
           border-right: 1px solid #C0C6CE !important;
           border-bottom: 1px solid #C0C6CE !important;
-          border-top: none !important;
+          border-bottom: 1px solid #C0C6CE !important;
           border-radius: 0 !important;
           width: 100% !important;
           max-width: 100% !important;
