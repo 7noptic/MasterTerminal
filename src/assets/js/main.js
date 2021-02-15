@@ -66,19 +66,27 @@ window.addEventListener('DOMContentLoaded', () => {
             modalEmailNum = document.querySelector('.modal-email-num'),
             modalLogistic = document.querySelector('.modal-logistic'),
             modalReviews = document.querySelector('.modal-serviceReviews'),
+            modalCheckoutProduct = document.querySelector('.modal-checkoutProduct'),
+            modalRefinePrice = document.querySelector('.modal-refinePrice'),
             modalEmail = document.querySelector('.modal-email');
 
         document.addEventListener('click', e => {
 
             let target = e.target;
 
+            if (target && (target.classList.contains('js-refinePrice') || target.classList.contains('modal-refinePrice__exit') || target.classList.contains('modal-refinePrice__btn'))) {
+                openCloseModal(modalRefinePrice);
+            }
+            if (target && (target.classList.contains('js-checkoutProduct') || target.classList.contains('modal-checkoutProduct__exit') || target.classList.contains('modal-checkoutProduct__btn'))) {
+                openCloseModal(modalCheckoutProduct);
+            }
             if (target && (target.classList.contains('js-serviceReviews') || target.classList.contains('modal-serviceReviews__exit') || target.classList.contains('modal-serviceReviews__btn'))) {
                 openCloseModal(modalReviews);
             }
             if (target && (target.classList.contains('js-call') || target.classList.contains('modal-call__exit') || target.classList.contains('modal-call__btn'))) {
                 openCloseModal(modalCall);
             }
-            if (target && (target.classList.contains('js-logistic') || target.classList.contains('modal-logistic__exit') || target.classList.contains('logistic-form__btn'))) {
+            if (target && (target.classList.contains('js-logistic') || target.classList.contains('modal-logistic__exit'))) {
                 openCloseModal(modalLogistic);
             }
             if (target && (target.classList.contains('js-call-noarea') || target.classList.contains('modal-call-noarea__exit') || target.classList.contains('modal-call-noarea__btn'))) {

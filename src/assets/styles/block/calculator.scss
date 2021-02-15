@@ -2,10 +2,11 @@
   width: 50%;
   border: 1px solid #C0C6CE;
   border-radius: 4px;
-  max-width: 100%!important;
+  max-width: 100% !important;
   height: 40px;
   margin-bottom: 20px;
 }
+
 .calculator {
   display: flex;
   align-items: center;
@@ -58,9 +59,11 @@
   &__content {
     width: 70%;
   }
-&__formes{
-  width: 30%;
-}
+
+  &__formes {
+    width: 30%;
+  }
+
   &__form {
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +73,15 @@
   &__left, &__right {
     display: flex;
     flex-wrap: wrap;
+
+    & > select {
+      width: 50%;
+      border: 1px solid #C0C6CE;
+      border-radius: 4px;
+      max-width: 100% !important;
+      height: 40px;
+      margin-bottom: 20px;
+    }
 
     & > label {
       width: 50%;
@@ -98,7 +110,7 @@
 
   }
 
-  &__input,.calc__select {
+  &__input, .calc__select {
     width: 50%;
     border: 1px solid #C0C6CE;
     border-radius: 4px;
@@ -149,8 +161,9 @@
     padding-top: 15px;
     font-size: 28px;
   }
-  &__agreement{
-    color: $blue!important;
+
+  &__agreement {
+    color: $blue !important;
   }
 }
 
@@ -245,7 +258,7 @@
         width: 100%;
       }
 
-      & > input,.calc__select {
+      & > input, .calc__select {
         width: 100%;
         max-width: 100%;
       }
@@ -269,7 +282,8 @@
     &__num {
       padding: 8px 0 15px;
     }
-    &__text{
+
+    &__text {
       font-size: 12px;
     }
   }

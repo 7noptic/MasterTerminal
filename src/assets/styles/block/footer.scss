@@ -65,6 +65,10 @@
   &__block {
     width: 20%;
     padding-right: 15px;
+    & > .logo{
+      display: block;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
@@ -135,7 +139,12 @@
       font-size: 12px;
       padding-bottom: 15px;
     }
-
+&__block{
+  & > .logo{
+    display: block;
+    margin-bottom: 40px;
+  }
+}
     &__logo {
       display: block;
       margin-bottom: 40px;
@@ -167,7 +176,13 @@
       font-size: 12px;
       padding-bottom: 15px;
     }
-
+    &__block{
+      & > .logo{
+        display: block;
+        margin-bottom: 0;
+        margin-right: 40px;
+      }
+    }
     &__logo {
       display: block;
       margin-bottom: 0;
@@ -242,6 +257,9 @@
   .footer {
     &__block {
       width: 50%;
+      & > .logo{
+        margin: 0;
+      }
     }
 
     &__link {

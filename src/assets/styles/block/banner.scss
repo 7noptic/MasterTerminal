@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-height: 670px!important;
+    height: 670px!important;
     overflow: hidden;
   }
 
@@ -161,6 +161,7 @@
   .banner {
     &__wrapper {
       padding: 100px 15px;
+      height: 600px!important;
     }
 
     &__block {
@@ -231,6 +232,7 @@
     &__wrapper {
       flex-wrap: wrap;
       padding: 30px 15px;
+      height: 400px!important;
     }
 
     &__block {
