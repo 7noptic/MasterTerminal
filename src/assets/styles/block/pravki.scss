@@ -74,10 +74,17 @@
   border: none !important;
   margin: 30px auto !important;
 }
-
+.comment-notes{
+  font-size: 14px;
+  padding: 10px 0;
+}
+label.wp-comment-cookies-consent{
+  font-size: 12px;
+  line-height: 14px;
+}
 .comment-form {
   & > textarea {
-    margin-bottom: 0 !important;
+    margin-bottom: -6px !important;
     border: 1px solid #c0c6ce !important;
     border-radius: 4px 4px 0 0 !important;
   }
@@ -124,6 +131,11 @@
     border-radius: 4px !important;
     font-size: 14px !important;
     margin-bottom: 20px !important;
+    &:hover{
+      background-color: #2C415B !important;
+      color: #FFFFFF!important;
+      border: 1px solid #2C415B !important;
+    }
   }
 
   & > input {
@@ -189,7 +201,7 @@
 }
 #logistic-form{
   align-items: center!important;
-  & > .logistic-form__row{
+  & > div > form > .logistic-form__row{
     margin-bottom: 0!important;
     &:first-of-type,&:first-child,&:nth-child(9){
       & span > input{
@@ -228,7 +240,7 @@
   width: 50%;
 }
   }
-  & > .logistic-form__submit{
+  & > div > form > .logistic-form__submit{
     & > button{
       display: flex !important;
       justify-content: center !important;
