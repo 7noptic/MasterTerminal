@@ -1,12 +1,17 @@
-.form{
-  &__agreement{
+.form {
+  &__agreement {
     font-size: 11px;
     color: #fff;
     line-height: 14px;
   }
-  &-wrapper{
+
+  &-wrapper {
     display: flex;
     flex-wrap: wrap;
-  
+
+    & > .banner__text {
+      font-size: 14px;
+      color: $blue;
+    }
   }
 }
