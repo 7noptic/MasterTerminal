@@ -1,10 +1,30 @@
-.table-responsive,.price__block.crossdock__block {
+.tablepress tbody td, .tablepress tfoot th {
+  border-top: none !important;
+}
+
+.tablepress td, .tablepress th {
+  padding: 0 !important;
+}
+
+.table-responsive, .price__block.crossdock__block {
   & > table {
     padding-bottom: 50px;
     max-width: 840px;
     width: 100%;
 
+    & > thead {
+      display: none !important;
+
+      & > tr {
+        & > th {
+          background-color: transparent !important;
+        }
+      }
+    }
+
     & > tbody {
+      margin-top: 20px !important;
+
       & > tr {
         display: flex;
         justify-content: space-between;
@@ -15,24 +35,27 @@
         &:first-child, &:first-of-type {
           border-top: 1px solid $gray;
         }
+
         & > td {
           font-size: 14px;
           display: flex;
           justify-content: flex-start;
+
           &:first-child {
             width: 5%;
             font-weight: 700;
           }
 
           &:nth-child(2) {
-            width: 65%;
+            width: 59%;
           }
 
           &:nth-child(3) {
-            width: 15%;
+            width: 18%;
           }
+
           &:nth-child(4) {
-            width: 15%;
+            width: 18%;
             justify-content: flex-end;
           }
         }
@@ -95,7 +118,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .table-responsive,.price__block.crossdock__block {
+  .table-responsive, .price__block.crossdock__block {
     & > table {
       padding-bottom: 50px;
       max-width: 840px;
@@ -108,11 +131,13 @@
           &:first-child, &:first-of-type {
             border-top: 1px solid $gray;
           }
+
           & > td {
             font-size: 12px;
             padding-right: 10px;
             display: flex;
             justify-content: flex-start;
+
             &:first-child {
               width: 5%;
               font-weight: 700;
@@ -125,6 +150,7 @@
             &:nth-child(3) {
               width: 15%;
             }
+
             &:nth-child(4) {
               width: 15%;
               justify-content: flex-end;
@@ -183,7 +209,7 @@
 }
 
 @media screen and (max-width: 575px) {
-  .table-responsive,.price__block.crossdock__block {
+  .table-responsive, .price__block.crossdock__block {
     & > table {
       padding-bottom: 50px;
       max-width: 840px;
@@ -193,14 +219,17 @@
         & > tr {
           padding: 7px 0;
           flex-wrap: wrap;
+
           &:first-child, &:first-of-type {
             border-top: 1px solid $gray;
           }
+
           & > td {
             font-size: 12px;
             padding-right: 10px;
             display: flex;
             justify-content: flex-start;
+
             &:first-child {
               width: 5%;
               font-weight: 700;
@@ -213,6 +242,7 @@
             &:nth-child(3) {
               width: 15%;
             }
+
             &:nth-child(4) {
               padding-top: 10px;
               display: flex;

@@ -35,7 +35,11 @@
     }
     & > .chosen{
       & > a{
-       
+        &::before {
+          content: '';
+
+
+        }
         &::after {
           content: '';
           display: block;

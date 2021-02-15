@@ -27,6 +27,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-height: 670px!important;
+    overflow: hidden;
   }
 
   &__block {
@@ -57,8 +59,10 @@
   &__title {
     color: #fff;
     font-weight: 800;
-    font-size: 80px;
+    font-size: 60px;
     padding-bottom: 50px;
+    line-height: 1;
+    max-height: 670px;
   }
 
   &__subtitle {
@@ -170,7 +174,7 @@
     }
 
     &__title {
-      font-size: 70px;
+      font-size: 50px;
       padding-bottom: 40px;
     }
 
@@ -204,7 +208,7 @@
     }
 
     &__title {
-      font-size: 50px;
+      font-size: 40px;
       padding-bottom: 30px;
     }
 
@@ -248,7 +252,7 @@
     }
 
     &__title {
-      font-size: 30px;
+      font-size: 26px;
       padding-bottom: 15px;
     }
 

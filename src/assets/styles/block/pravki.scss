@@ -2,6 +2,48 @@
   text-align: center;
 }
 
+.quantity, .productPrice {
+  display: none !important;
+}
+
+.button.product_type_simple {
+  display: none !important;
+}
+
+.lwptoc_itemWrap {
+  & > li {
+    & > a {
+      color: $blue !important;
+
+      & span {
+        color: $blue !important;
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+      }
+    }
+  }
+}
+
+.lwptoc-autoWidth .lwptoc_i {
+  display: block !important;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.contacts__form,.calculator__requires {
+  & > div {
+    & > form {
+      & > div {
+        & > .form__agreement {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
 .error-main-page {
   margin: 24px auto !important;
   display: table !important;
@@ -84,7 +126,9 @@ label.wp-comment-cookies-consent {
   font-size: 12px;
   line-height: 14px;
 }
-
+.woocommerce p.stars a::before{
+  color: $orange;
+}
 .comment-form {
   & > textarea {
     margin-bottom: -6px !important;
@@ -96,7 +140,13 @@ label.wp-comment-cookies-consent {
     margin-bottom: 20px !important;
     border-radius: 0 0 4px 4px !important;
   }
-
+& > .comment-form-cookies-consent{
+  display: flex;
+  & > label{
+    font-size: 10px;
+    padding-left: 10px;
+  }
+}
   & > .form-submit {
     & > .submit {
       display: flex !important;
@@ -167,9 +217,14 @@ label.wp-comment-cookies-consent {
 
 #calculatorSend {
   background-color: #E9EDF2;
+  padding: 25px !important;
+  border-radius: 4px !important;
 
   & > input {
     margin-bottom: 0 !important;
+    width: 100% !important;
+    height: 45px !important;
+    padding: 10px !important;
     border-left: 1px solid #C0C6CE !important;
     border-right: 1px solid #C0C6CE !important;
     border-bottom: 1px solid #C0C6CE !important;
@@ -190,6 +245,9 @@ label.wp-comment-cookies-consent {
     border-top: none !important;
     border-radius: 0 0 4px 4px !important;
     margin-bottom: 20px !important;
+    height: 90px !important;
+    width: 100% !important;
+    padding: 10px !important;
   }
 
   & > button {
@@ -303,7 +361,7 @@ label.wp-comment-cookies-consent {
       width: 100% !important;
       max-width: 100% !important;
       padding: 10px !important;
-      margin: 0 15px!important;
+      margin: 0 15px !important;
     }
 
     & > input {
@@ -314,22 +372,27 @@ label.wp-comment-cookies-consent {
       width: 100% !important;
       max-width: 100% !important;
       padding: 10px !important;
-      margin: 0 15px!important;
+      margin: 15px 0 !important;
     }
-    & > label > input {
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      height: 50px !important;
+
+    & > label {
       width: 100% !important;
-      text-align: center !important;
-      background: #FF5500 !important;
-      border-radius: 100px !important;
-      margin-bottom: 20px !important;
-      margin-top: 20px !important;
-      color: #fff !important;
-      font-weight: 800 !important;
-      font-size: 14px !important;
+
+      & > input {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 50px !important;
+        width: 100% !important;
+        text-align: center !important;
+        background: #FF5500 !important;
+        border-radius: 100px !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+        color: #fff !important;
+        font-weight: 800 !important;
+        font-size: 14px !important;
+      }
     }
   }
 }

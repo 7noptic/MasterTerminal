@@ -1,3 +1,11 @@
+.calc__select {
+  width: 50%;
+  border: 1px solid #C0C6CE;
+  border-radius: 4px;
+  max-width: 100%!important;
+  height: 40px;
+  margin-bottom: 20px;
+}
 .calculator {
   display: flex;
   align-items: center;
@@ -90,7 +98,7 @@
 
   }
 
-  &__input {
+  &__input,.calc__select {
     width: 50%;
     border: 1px solid #C0C6CE;
     border-radius: 4px;
@@ -237,7 +245,7 @@
         width: 100%;
       }
 
-      & > input {
+      & > input,.calc__select {
         width: 100%;
         max-width: 100%;
       }

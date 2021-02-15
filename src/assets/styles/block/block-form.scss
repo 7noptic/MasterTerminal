@@ -20,6 +20,19 @@
     position: relative;
     z-index: 3;
     padding: 70px 15px;
+
+    & > .wpcf7 {
+      & > form {
+        & > .form-wrapper {
+          & > div {
+
+            width: 25%;
+
+
+          }
+        }
+      }
+    }
   }
 
   &__title {
@@ -67,16 +80,36 @@
     padding-top: 30px;
     font-size: 14px !important;
     line-height: 22px !important;
+
+    & > a {
+      color: $orange;
+    }
   }
 }
 
 @media screen and (max-width: 991px) {
-  .form-wrapper>div{
+  .form-wrapper > div {
     width: 33%;
   }
   .block-form {
     &__wrapper {
       padding: 40px 15px;
+
+      & > .wpcf7 {
+        & > form {
+          & > .form-wrapper {
+            & > div {
+
+              width: 33% !important;
+
+              &:nth-child(4) {
+                width: 100% !important;
+              }
+
+            }
+          }
+        }
+      }
     }
 
     &__title {
@@ -111,7 +144,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .form-wrapper>div{
+  .form-wrapper > div {
     width: 100%;
   }
   .block-form {

@@ -72,6 +72,14 @@
 
   &__wrapper {
     display: flex;
+flex-wrap: wrap;
+    & > .form {
+      width: 25%;
+    }
+    & > p{
+      width: 100%;
+      margin-top: 25px;
+    }
   }
 
   &-menu {
@@ -113,16 +121,21 @@
   &__content {
     width: 50%;
     font-size: 14px;
-
+& > p{
+  margin-bottom: 15px;
+}
+    & > .wp-video{
+      margin: 25px 0;
+    }
     & > ul {
-      padding: 20px 15px !important;
+      padding: 20px 0 !important;
 
       & > li {
         font-size: 14px;
         padding-bottom: 10px;
         position: relative;
         padding-left: 15px;
-
+list-style: none;
         &::before {
           content: '';
           display: block;
@@ -131,7 +144,7 @@
           border-radius: 50%;
           background-color: $gray;
           position: absolute;
-          top: 7px;
+          top: 8px;
           left: 0px;
         }
       }
@@ -151,6 +164,10 @@
     &__wrapper {
       padding: 35px;
       background-color: $gray;
+
+      & > div > span > textarea {
+        margin-top: -20px !important;
+      }
     }
 
     &__btn {
@@ -296,6 +313,10 @@
 
     &__wrapper {
       flex-wrap: wrap;
+
+      & > .form {
+        width: 100%;
+      }
     }
 
     &-menu {
