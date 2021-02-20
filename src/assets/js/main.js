@@ -1,20 +1,39 @@
 'use script';
 import $ from 'jquery';
-import Swiper, {Navigation, Pagination, Thumbs} from 'swiper';
+import Swiper from 'swiper/bundle';
+
 import Readmore from "readmore-js";
 import GLightbox from 'glightbox';
 
-Swiper.use([Navigation, Pagination, Thumbs]);
+
+let btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
 window.addEventListener('DOMContentLoaded', () => {
         const lightbox = GLightbox({});
 
-        $('[type="tel"]').mask("+7 (999) 999-99-99");
+        
+
+
         /* BURGER-MENU */
         let headerMenu = document.querySelector('.header__nav'),
             header = document.querySelector('.header'),
             html = document.querySelector('html'),
             body = document.querySelector('body'),
-            headerBurger = document.querySelector('.header__burger');
+            headerBurger = document.querySelector('.header__burger'),
+            regionBtn = document.querySelector('.js-region'),
+            regionTrigger = 0;
 
         header.addEventListener('click', e => {
 
@@ -29,7 +48,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 body.classList.toggle('lock');
             }
         })
-
+        
+        if(regionTrigger = 0){
+            localStorage.setItem('city', '"Санкт-Петербург"');
+            let testValue = localStorage.getItem('city');
+            console.log(testValue);
+            regionBtn.innerHTML = testValue;
+        }else{
+            console.log(localStorage.getItem('city'));
+            console.log(typeof(localStorage.getItem('city')));    
+            regionBtn.innerHTML = localStorage.getItem('city');
+        }
+        
         /* RATING */
         let ratingParent = document.querySelector('.js-rating'),
             ratingInput = document.querySelector('#js-rating'),
@@ -68,8 +98,23 @@ window.addEventListener('DOMContentLoaded', () => {
             modalReviews = document.querySelector('.modal-serviceReviews'),
             modalCheckoutProduct = document.querySelector('.modal-checkoutProduct'),
             modalRefinePrice = document.querySelector('.modal-refinePrice'),
-            modalEmail = document.querySelector('.modal-email');
-
+            modalEmail = document.querySelector('.modal-email'),
+            regionSelect = document.querySelectorAll('.modal-region__link');
+            let swal = document.querySelector('.swal2-popup .swal2-modal .swal2-show');
+if(swal){
+swal.addEventListener('click', (event) => {
+    if (target && target.tagName == 'SPAN')  {
+        html.classList.toggle('lock');
+                body.classList.toggle('lock');
+                modalBlock.classList.toggle('sidebar-bg');
+                allModal.forEach(item => {
+                    if (item.classList.toggle('active')) {
+                        item.classList.remove('active');
+                    }
+                });
+    }
+});
+}
         document.addEventListener('click', e => {
 
             let target = e.target;
@@ -101,10 +146,58 @@ window.addEventListener('DOMContentLoaded', () => {
             if (target && (target.classList.contains('js-region') || target.classList.contains('modal-region__exit'))) {
                 openCloseModal(modalRegion);
             }
+            
+            
+            if (target && target.classList.contains('modal-region__link')) {
+                console.log(regionSelect);
+                console.log(target);
+
+                regionSelect.forEach(item => {
+                    if (item == target) {
+                        let citiValue = item.innerHTML;
+                        localStorage.setItem('city', citiValue);
+                        let testValue = localStorage.getItem('city')
+                        regionBtn.innerHTML = testValue.innerHTML;
+                        console.log(testValue);
+                        console.log(typeof(testValue));
+                        regionBtn.innerHTML = testValue;
+                        regionTrigger++;
+                    }
+                });
+                openCloseModal(modalRegion);
+            }
+            if (target && target.classList.contains('js-region-close')) {
+                let city = document.querySelector('.js-select-city');
+                localStorage.setItem('city', city.innerHTML);
+                        let testValue = localStorage.getItem('city')
+                        regionBtn.innerHTML = testValue.innerHTML;
+                        console.log(testValue);
+                        console.log(typeof(testValue));
+                        regionBtn.innerHTML = testValue;
+                        regionTrigger++;
+                openCloseModal(modalRegion);
+            }
+            
+           
+
+/*
+var text = $('#test').text();
+
+$('.btn').on('click', function(){
+alert('click');
+
+let a = $(this).text();
+localStorage.setItem('test', a);
 
 
+$('#town').html(localStorage.getItem('test'));
+
+});
+
+localStorage.setItem('test', text);
+alert(localStorage.getItem('test'));
             /* ЗАКРЫТИЕ ПО КЛИКУ НА САЙДБАР */
-            if (target && target.classList.contains('sidebar-bg')) {
+            if (target && (target.classList.contains('sidebar-bg') || target.classList.contains('swal2-confirm'))) {
                 html.classList.toggle('lock');
                 body.classList.toggle('lock');
                 modalBlock.classList.toggle('sidebar-bg');
@@ -329,7 +422,7 @@ window.addEventListener('DOMContentLoaded', () => {
             },
 
         });
-
+/*
 
         let galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
@@ -347,7 +440,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 slideThumbActiveClass: 'swiper-slide-thumb-active',
             },
 
-        });
+        });*/
         /* CATALOG MEDIA LIST */
         const catalogParent = document.querySelector('.catalog__sidebar');
 
@@ -477,6 +570,9 @@ window.addEventListener('DOMContentLoaded', () => {
             labelBtn.innerHTML = 'Загрузить файл';
         }
         ;
+        var mh = Math.max.apply(Math, $('.swiper-slide').map(function(){  
+    return $(this).height();
+}).get());
     },
 
 

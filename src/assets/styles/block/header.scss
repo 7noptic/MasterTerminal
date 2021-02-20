@@ -194,7 +194,7 @@ nav li:hover > .header__list-lvl2 {
   width: 20%;
 }
     &:first-child {
-      padding: 30px 15px 15px;
+      padding:15px;
     }
 
     &:last-child {
@@ -210,7 +210,9 @@ nav li:hover > .header__list-lvl2 {
   &__mail, &__nav {
     width: 56%;
   }
-
+  &__mail{
+    justify-content: space-between;
+  }
   &__logo {
     width: 20%;
   }

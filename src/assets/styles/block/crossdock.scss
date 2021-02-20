@@ -23,6 +23,7 @@
     display: flex;
     border-radius: 4px;
     margin-bottom: 50px;
+    height: 230px;
   }
 
   &__left, &__right {
@@ -483,7 +484,9 @@
 @media screen and (max-width: 767px) {
   .crossdock {
     padding: 15px 15px 30px;
-
+&__banner{
+height: 250px;
+}
     &__rating {
       font-size: 12px;
     }
@@ -593,6 +596,7 @@
 
     &__banner {
       margin-bottom: 40px;
+      height: 270px;
     }
 
     &__left {

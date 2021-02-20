@@ -1,11 +1,104 @@
 .text-center {
   text-align: center;
 }
-
+#tab-title-reviews{
+  padding: 0 15px;
+}
+.oparin{
+  &:hover{
+    &>svg>path{
+      fill:$orange;
+    }
+  }
+}
+.entry-header{
+  padding-bottom: 30px;
+}
 .tablepress .row-hover tr:hover td {
   background-color: transparent !important;
 }
+.term-description{
+  width: 100%;
+max-width: 1250px;
+margin: -160px auto 40px;
+padding-right: 19%;
+}
+.form__wrapper{
+  & > p{
+    color: $blue;
+  }
+}
+#wpcf7-f4839-o1{
+  & > form{
+    & > .form__wrapper{
+      & > p{
+        color: #fff;
+        & > a{
+          color: $orange;
+        }
+      }
+    }
+  }
+}.d-none{
+  display: none;
+}
+/* cf7 */
+.wpcf7 form.sent .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output,
+.wpcf7 form.spam .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  display: none !important;
+}
+h1:not(.site-title)::before, h2#swal2-title::before {
+  content: "" !important;
+  height: 0;
+  display: none !important;
+}
+.block-form__wrapper{
+  &>div{
+    &> form{
+      &>.wpcf7-response-output{
+        color: #fff;
+      }
+    }
+  }
+}
+.swiper-slide.swiper-slide-active{
+  & > div > div > div{
+    animation: ShowText .7s both .7s;
+  }
+}
+@keyframes ShowText{
+0%{
+  transform: translate(0,-50px);
+  opacity: 0;
+}
+100%{
+  transform: translate(0,0px);
+  opacity: 1;
+}
+}
+@media screen and (max-width:1279px){
+  .term-description{
+  margin: 0;
+  padding: 20px 15px 40px;
+  }
+}
+.section-descr{
+  & > p{
+    padding-bottom: 15px;
+    & > iframe{
+      margin: 10px 0 30px;
+    }
+  }
+}
 
+.product-card__quantity .quantity { display: inline-block!important;}
+.news-date{
+  padding-bottom: 10px;
+}
 .quantity, .productPrice {
   display: none !important;
 }
@@ -13,7 +106,10 @@
 .button.product_type_simple {
   display: none !important;
 }
-
+.news__img, .news__img>img {
+  max-height: 230px!important;
+  object-fit: cover;
+}
 .lwptoc_itemWrap {
   & > li {
     & > a {
@@ -22,7 +118,9 @@
       & span {
         color: $blue !important;
         font-size: 16px !important;
-        margin-bottom: 15px !important;
+        font-weight: 600;
+margin-bottom: 30px !important;
+display: block;
       }
     }
   }
@@ -510,5 +608,10 @@ label.wp-comment-cookies-consent {
         margin-bottom: 15px !important;
       }
     }
+  }
+}
+#commentform{
+  & > #author{
+    border-top: 1px solid #c0c6ce!important;
   }
 }

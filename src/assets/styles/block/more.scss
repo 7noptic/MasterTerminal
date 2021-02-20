@@ -23,7 +23,10 @@
 
   &__name {
     padding: 25px 0 20px;
-    font-size: 13px;
+font-size: 13px;
+overflow: hidden;
+text-overflow: ellipsis;
+height: 5em;
   }
 
   &__price {
@@ -106,6 +109,9 @@
     &__name {
       padding: 20px 0 15px;
       font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 5em;
     }
     &__price {
       &-s {

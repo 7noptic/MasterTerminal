@@ -12,10 +12,9 @@
   }
 
   &__wrapper {
-    padding: 40px 20px 20px 20px;
+    padding: 80px 20px 20px 20px;
     background-color: #fff;
-    width: 100%;
-    max-width: 360px;
+    width: 320px;
     height: 100%;
     overflow: auto;
     display: flex;
@@ -71,7 +70,7 @@
   &__exit {
     font-size: 26px;
     position: absolute;
-    top: 5px;
+    top: 50px;
     right: 5px;
     cursor: pointer;
     &::before{
