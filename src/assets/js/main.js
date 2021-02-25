@@ -1,39 +1,49 @@
 'use script';
 import $ from 'jquery';
 import Swiper from 'swiper/bundle';
-
+import jquery from 'jquery';
 import Readmore from "readmore-js";
 import GLightbox from 'glightbox';
 
 
-let btn = $('#button');
-
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
+/*
+$(document).ready(function() {
+    // Show or hide the sticky footer button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('#button').addClass('show');
+        } else {
+            $('#button').removeClass('show');
+        }
+    });
+    
+    // Animate the scroll to top
+    $('#button').click(function(event) {
+        event.preventDefault();
+        
+        $('html, body').animate({scrollTop: 0}, 300);
+    })
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
+
+
+window.scrollTo({
+    top: 200,
+    behavior: "smooth"
+}, ()=>{
+    
+});*/
 window.addEventListener('DOMContentLoaded', () => {
         const lightbox = GLightbox({});
 
         
-
-
         /* BURGER-MENU */
         let headerMenu = document.querySelector('.header__nav'),
             header = document.querySelector('.header'),
             html = document.querySelector('html'),
             body = document.querySelector('body'),
             headerBurger = document.querySelector('.header__burger'),
-            regionBtn = document.querySelector('.js-region'),
-            regionTrigger = 0;
+            regionBtn = document.querySelector('.js-region');
 
         header.addEventListener('click', e => {
 
@@ -47,19 +57,12 @@ window.addEventListener('DOMContentLoaded', () => {
                 html.classList.toggle('lock');
                 body.classList.toggle('lock');
             }
-        })
-        
-        if(regionTrigger = 0){
-            localStorage.setItem('city', '"Санкт-Петербург"');
-            let testValue = localStorage.getItem('city');
-            console.log(testValue);
-            regionBtn.innerHTML = testValue;
-        }else{
+        });
+            if(localStorage.getItem('city') != null){
             console.log(localStorage.getItem('city'));
             console.log(typeof(localStorage.getItem('city')));    
             regionBtn.innerHTML = localStorage.getItem('city');
-        }
-        
+            }
         /* RATING */
         let ratingParent = document.querySelector('.js-rating'),
             ratingInput = document.querySelector('#js-rating'),
@@ -89,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         /* MODAL */
         let modalBlock = document.querySelector('.js-sidebars'),
-            allModal = document.querySelectorAll('.js-sidebars > section'),
+            allModal = document.querySelectorAll('.js-sidebars > div'),
             modalCall = document.querySelector('.modal-call'),
             modalRegion = document.querySelector('.modal-region'),
             modalCallNoArea = document.querySelector('.modal-call-noarea'),
@@ -101,20 +104,28 @@ window.addEventListener('DOMContentLoaded', () => {
             modalEmail = document.querySelector('.modal-email'),
             regionSelect = document.querySelectorAll('.modal-region__link');
             let swal = document.querySelector('.swal2-popup .swal2-modal .swal2-show');
-if(swal){
-swal.addEventListener('click', (event) => {
-    if (target && target.tagName == 'SPAN')  {
-        html.classList.toggle('lock');
+
+            if(swal){
+            swal.addEventListener('click', (event) => {
+                if (target && target.tagName == 'SPAN')  {
+                    html.classList.toggle('lock');
+                            body.classList.toggle('lock');
+                            modalBlock.classList.toggle('sidebar-bg');
+                            allModal.forEach(item => {
+                                if (item.classList.toggle('active')) {
+                                    item.classList.remove('active');
+                                }
+                            });
+                }
+            });
+            }
+            function openCloseModal(modal) {
+                html.classList.toggle('lock');
                 body.classList.toggle('lock');
                 modalBlock.classList.toggle('sidebar-bg');
-                allModal.forEach(item => {
-                    if (item.classList.toggle('active')) {
-                        item.classList.remove('active');
-                    }
-                });
-    }
-});
-}
+                modal.classList.toggle('active');
+            }
+            
         document.addEventListener('click', e => {
 
             let target = e.target;
@@ -149,17 +160,12 @@ swal.addEventListener('click', (event) => {
             
             
             if (target && target.classList.contains('modal-region__link')) {
-                console.log(regionSelect);
-                console.log(target);
-
                 regionSelect.forEach(item => {
                     if (item == target) {
                         let citiValue = item.innerHTML;
-                        localStorage.setItem('city', citiValue);
+                        localStorage.setItem('city', citiValue)
                         let testValue = localStorage.getItem('city')
                         regionBtn.innerHTML = testValue.innerHTML;
-                        console.log(testValue);
-                        console.log(typeof(testValue));
                         regionBtn.innerHTML = testValue;
                         regionTrigger++;
                     }
@@ -169,40 +175,25 @@ swal.addEventListener('click', (event) => {
             if (target && target.classList.contains('js-region-close')) {
                 let city = document.querySelector('.js-select-city');
                 localStorage.setItem('city', city.innerHTML);
-                        let testValue = localStorage.getItem('city')
+                        let testValue = localStorage.getItem('city');
+                        localStorage.setItem('regionTrigger', 1);
                         regionBtn.innerHTML = testValue.innerHTML;
                         console.log(testValue);
                         console.log(typeof(testValue));
                         regionBtn.innerHTML = testValue;
-                        regionTrigger++;
+                        var regionTrigger = localStorage.getItem('regionTrigger');
+                        console.log(regionTrigger);
                 openCloseModal(modalRegion);
             }
             
-           
 
-/*
-var text = $('#test').text();
-
-$('.btn').on('click', function(){
-alert('click');
-
-let a = $(this).text();
-localStorage.setItem('test', a);
-
-
-$('#town').html(localStorage.getItem('test'));
-
-});
-
-localStorage.setItem('test', text);
-alert(localStorage.getItem('test'));
             /* ЗАКРЫТИЕ ПО КЛИКУ НА САЙДБАР */
             if (target && (target.classList.contains('sidebar-bg') || target.classList.contains('swal2-confirm'))) {
                 html.classList.toggle('lock');
                 body.classList.toggle('lock');
                 modalBlock.classList.toggle('sidebar-bg');
                 allModal.forEach(item => {
-                    if (item.classList.toggle('active')) {
+                    if (item.classList.contains('active')) {
                         item.classList.remove('active');
                     }
                 });
@@ -215,12 +206,7 @@ alert(localStorage.getItem('test'));
 
         });
 
-        function openCloseModal(modal) {
-            html.classList.toggle('lock');
-            body.classList.toggle('lock');
-            modalBlock.classList.toggle('sidebar-bg');
-            modal.classList.toggle('active');
-        }
+       
 
 
         /*BUTTON READMORE */
@@ -543,6 +529,31 @@ alert(localStorage.getItem('test'));
 
         }
 
+        let scrollToTop = document.querySelector('#button');
+        if (scrollToTop){
+            window.addEventListener('scroll', function onScroll() {
+
+                if (window.pageYOffset > 250) {
+                    scrollToTop.classList.add('show');
+                    
+                }
+                
+            }), {passive: true};
+            window.addEventListener('scroll', function onScroll() {
+
+                if (window.pageYOffset < 250) {
+                    scrollToTop.classList.remove('show');
+                    
+                }
+                
+            }), {passive: true};
+            scrollToTop.addEventListener('click', (e) => {
+                e.preventDefault;
+                document.documentElement.scrollIntoView(true);
+            })
+        }
+        
+        
         /* FIX TEXT SLIDER */
         let disable_triple_click = true,
             down = new Date().getTime(),

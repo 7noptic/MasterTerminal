@@ -14,6 +14,16 @@
 .entry-header{
   padding-bottom: 30px;
 }
+.type-post{
+  padding: 40px 0 0!important;
+}
+.crossdock__btn-blue{
+  height: 55px!important;
+}
+.modat__title{
+  padding-bottom: 20px;
+  text-align: center;
+}
 .tablepress .row-hover tr:hover td {
   background-color: transparent !important;
 }
@@ -27,6 +37,20 @@ padding-right: 19%;
   & > p{
     color: $blue;
   }
+}
+#button{ 
+right:0!important;
+left:30px!important;
+}
+@media screen and(max-width: 575px){
+.custom-logo{
+width:150px;
+height:30px;
+margin-bottom:0;
+}
+}
+.crossdock__wrapper > .form{
+  padding-left: 15px;
 }
 #wpcf7-f4839-o1{
   & > form{

@@ -106,7 +106,7 @@
 
     <div class="header-search__wrapper">
         <form role="search" method="get" class="searchform" id="headerSearchForm" style="" action="<?php echo home_url( '/' ) ?>">
-            <input type="text" value="Полоса" name="s" id="s" style="background: rgb(255, 255, 255);">
+            <input type="text" value="Перетарка" name="s" id="s" style="background: rgb(255, 255, 255);">
             <input type="submit" id="searchsubmit" class="searchsubmit" value="найти">
         </form>
     </div>
