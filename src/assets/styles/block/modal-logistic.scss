@@ -1,4 +1,10 @@
-.modal-logistic {
+.modal-logistic2{
+  & > .logistic-form__wrapper{
+    padding: 100px 30px 50px 20px!important;
+    box-shadow: none!important;
+  }
+}
+.modal-logistic, .modal-logistic2{
   position: fixed;
   top: 0;
   height: 100%;
@@ -24,7 +30,7 @@
   }
 
 
-  &__exit {
+  &__exit,&__exit2 {
     font-size: 26px;
     position: absolute;
     top: 70px;

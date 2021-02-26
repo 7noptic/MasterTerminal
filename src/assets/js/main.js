@@ -98,6 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
             modalCallNoArea = document.querySelector('.modal-call-noarea'),
             modalEmailNum = document.querySelector('.modal-email-num'),
             modalLogistic = document.querySelector('.modal-logistic'),
+            modalLogistic2 = document.querySelector('.modal-logistic2'),
             modalReviews = document.querySelector('.modal-serviceReviews'),
             modalCheckoutProduct = document.querySelector('.modal-checkoutProduct'),
             modalRefinePrice = document.querySelector('.modal-refinePrice'),
@@ -144,6 +145,9 @@ window.addEventListener('DOMContentLoaded', () => {
             }
             if (target && (target.classList.contains('js-logistic') || target.classList.contains('modal-logistic__exit'))) {
                 openCloseModal(modalLogistic);
+            }
+            if (target && (target.classList.contains('js-logistic2') || target.classList.contains('modal-logistic__exit2'))) {
+                openCloseModal(modalLogistic2);
             }
             if (target && (target.classList.contains('js-call-noarea') || target.classList.contains('modal-call-noarea__exit') || target.classList.contains('modal-call-noarea__btn'))) {
                 openCloseModal(modalCallNoArea);

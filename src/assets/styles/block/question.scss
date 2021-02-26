@@ -11,7 +11,7 @@
 
   &__img {
     width: 100%;
-    max-height: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     & > svg,& > img{
@@ -23,7 +23,7 @@
   &__item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    //justify-content: space-between;
     width: 22%;
     margin-bottom: 70px;
     padding-right: 3%;

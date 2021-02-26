@@ -1,5 +1,6 @@
 .news{
   &__img{
+    height: 230px !important;
     max-height: 230px!important;
     display: flex;
     justify-content: flex-start;
@@ -30,6 +31,7 @@
 @media screen and (max-width: 479px){
   .news{
     &__img{
+      height: 150px !important;
       max-height: 150px!important;
       &>img{
         max-height:150px!important;
